@@ -6,12 +6,22 @@
  * separated with space(" ")
  */
 
+function greetGenerator (greeting,name) {
+  return `${greeting} ${name}`;
+}
+
+
+
 /**
  * Exercise 2
  * 
  * create a function "convertToLowerCase" which takes a capitalized string
  * as a param, convert to lowercase string and return it.
  */
+
+function convertToLowerCase(caps) {
+    return caps.toLowerCase();
+}
 
 /**
  * Exercise 3
@@ -20,8 +30,18 @@
  * for example('kitten') as a param, convert to uppercase string('KITTEN') and return it.
  */
 
+function convertToUpperCase(upper) {
+    return upper.toUpperCase();
+}
+
 /**
  * Exercise 4
  * create a function 'getCharByIndex' that takes a string and a character position
  * as a params and return a character from your string that is in selected position
  */
+
+
+function getCharByIndex(stringer, char) {
+    return stringer.charAt(char);
+
+}
