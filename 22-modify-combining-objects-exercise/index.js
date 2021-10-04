@@ -4,12 +4,28 @@
  * Create an object {user} and add properties "firstName" and "lastName".
  */
 
+ const user = {
+     firstName:"Bob",
+     lastName:"Pussman"
+
+ };
+
+ /** console.log(user);
+
 /**
  * Exercise 2
  *
  * Create an object {userRead} and add properties "books" and "newspapers".
  * Both should be arrays with strings.
  */
+
+
+const userRead = {
+    books:["Harry Potter","The Road"],
+    newspapers:["Guardian","Mirror"]
+};
+
+/** console.log(userRead);
 
 /**
  * Exercise 3
@@ -27,12 +43,23 @@
  * }
  */
 
+ Object.assign(user, userRead);
+
+
+
+
 /**
  * Exercise 4
  *
  * Create an object {userWatch} and add properties "tvShows" and "movies".
  * Both should be arrays with strings.
  */
+
+const userWatch = {
+    tvShows: ["The Crown"],
+    movies:["Inception"]
+}
+
 
 /**
  * Exercise 5
@@ -54,3 +81,9 @@
  *   }
  * }
  */
+ 
+ user["userWatch"] = userWatch;
+
+ console.log(user);
+
+

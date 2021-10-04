@@ -9,11 +9,21 @@ const user = {};
  * add property "firstName" to "user" and assign any name
  */
 
+
+user.firstName = "beth";
+
+
+
+
+
 /**
  * Exercise 2
  *
  * add property "lastName" to "user" and assign any last name
  */
+
+ user.lastName = "jones";
+
 
 /**
  * Exercise 3
@@ -21,4 +31,10 @@ const user = {};
  * 2 params, first - property name and second - property value
  * and set a new property for 'user' object
  */
+
+function addANewProperty (propname,propvalue) {
+    user[propname] = propvalue;
+
+};
+
 
