@@ -10,6 +10,14 @@
  * a new array.
  */
 
+const convertToPositive = (numbersArray) => {
+    const result = numbersArray.map(element => {
+        return Math.abs(element);
+      });
+      return result;
+}
+
+
 /**
  * Exercise 2
  *
@@ -23,12 +31,30 @@
  * ]) will return ['Alex', 'John']
  */
 
+const getAllNames = (namesArray) => {
+    const result = namesArray.map(element => {
+        return element["name"]
+    });
+    return result;
+}
+
 /**
  * Exercise 3
  *
  * create a function {greetAll} that takes array of names as a parameter
  * and return a new array of greetings "Hi, {name}!"
  */
+
+const greetAll = array =>  {
+   const result = array.map(element => {
+         return `Hi, ${element}!`;
+     });
+     return result;
+}
+
+
+
+
 
 /**
  * Exercise 4
