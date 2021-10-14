@@ -10,7 +10,7 @@
  * a new array.
  */
 
-const convertToPositive = (numbersArray) => {
+ const convertToPositive = (numbersArray) => {
     const result = numbersArray.map(element => {
         return Math.abs(element);
       });
