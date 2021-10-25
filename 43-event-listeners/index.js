@@ -9,12 +9,32 @@
  * logs a message in the console when a click occurs
  */
 
+
+const clickTheButton = () => {
+     const buttonElement = document.querySelector("button");
+ buttonElement.addEventListener("click", event => {
+     console.log("the button was clicked!");
+ });
+}
+ 
+
+
+
 /**
  * Exercise 2
  *
  * create a function {hoverOver} which listens for a hover over an
  * "a" tag inside div with class "mouseover" and logs a message in the console
  */
+
+const hoverOver = () => {
+    const buttonHoverElement = document.querySelector("a");
+    buttonHoverElement.addEventListener("mouseover", event => {
+        console.log("Find out more")
+    });
+}
+
+
 
 /**
  * Exercise 3
@@ -24,12 +44,27 @@
  * and log a message in the console
  */
 
+const handleLeave = () => {
+const cursorElement = document.querySelector("a");
+cursorElement.addEventListener("mouseout", event => {
+    console.log("come back!")
+})    
+}
+
 /**
  * Exercise 4
  *
  * create a function {focusOnMe} which will log a message in the console
  * when you focus on input which is inside 'div' with class 'input'
  */
+
+
+const focusOnMe = () => {
+    const focusElement = document.querySelector("input");
+    focusElement.addEventListener("focus", event => {
+        console.log("You're focused on me")
+    })
+}
 
 /**
  * Exercise 5
@@ -39,6 +74,13 @@
  * and then click on anything else
  */
 
+const clickElsewhere = () => {
+    const focusElseWhereElement = document.querySelector("input");
+    focusElseWhereElement.addEventListener("blur", event => {
+        console.log("You clicked elsewhere")
+})
+};
+
 /**
  * Exercise 6
  *
@@ -46,6 +88,13 @@
  * when you focus on input which is inside 'div' with class 'input'
  * and then press any key
  */
+
+const anyKey = document.querySelector("input");
+const pressAKey = () => {
+anyKey.addEventListener("keydown", event => {
+    console.log("You pressed a key")
+})    
+};
 
 /**
  * Exercise 7
@@ -55,6 +104,17 @@
  * and then press any key and release it
  */
 
+const releaseAKey = () => {
+    const anyKeyUp = document.querySelector("input");
+
+    anyKeyUp.addEventListener("keyup", event => {
+        console.log("You realsed a key")
+
+    })
+
+    
+}
+
 /**
  * Exercise 8
  *
@@ -62,6 +122,8 @@
  * to uppercase when you focus on input which is inside 'div' with class 'input'
  * and then press any key and release it
  */
+
+
 
 /**
  * Exercise 9

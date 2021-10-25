@@ -5,6 +5,7 @@
  * to variable {paragraphs}
  */
 
+
 /**
  * Exercise 2
  * select the first p tag with getElementsByTagName and assign it
