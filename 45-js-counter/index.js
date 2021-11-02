@@ -1,5 +1,15 @@
 let step = 0;
 let counter = 0;
+const stepForm = document.querySelector('.step_form')
+const stepValue = document.querySelector('.step_value')
+const counterValue = document.querySelector('.counter_value')
+const decrementBtn = document.querySelector('#decrement')
+const incrementBtn = document.querySelector('#increment')
+
+const autoDecrement = document.querySelector('#auto_decrement')
+const autoIncrement = document.querySelector('#auto_increment')
+const stopAuto = document.querySelector('#stop_auto')
+let interval;
 
 /**
  * Exercise 1
@@ -11,6 +21,13 @@ let counter = 0;
  * NOTE: ".counter_value" should always represent the current value of {counter}
  */
 
+
+const action = (symbol) => {
+if (symbol === `+`) counter += step;
+if (symbol === `-`) counter -= step;
+
+counterValue.innerText = counter;
+}
 /**
  * Exercise 2
  *
@@ -23,6 +40,17 @@ let counter = 0;
  *
  */
 
+
+stepForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const input = event.target.querySelector('input');
+    step = parseInt(input.value);
+    input.value = 1;
+    stepValue.innerText = step;
+});
+
+
+
 /**
  * Exercise 3
  *
@@ -31,6 +59,8 @@ let counter = 0;
  *
  * NOTE: remember to use your {action} function
  */
+
+ decrementBtn.addEventListener('click', () => action('-'));
 
 /**
  * Exercise 4
@@ -41,6 +71,8 @@ let counter = 0;
  * NOTE: remember to use your {action} function
  */
 
+ incrementBtn.addEventListener('click', () => action('+'));
+
 /**
  * Exercise 5
  *
@@ -50,6 +82,14 @@ let counter = 0;
  * NOTE: ".counter_value" should represent current state of counter
  */
 
+
+autoDecrement.addEventListener('click', () => {
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+        action('-');
+    }, 1000);
+});
 /**
  * Exercise 6
  *
@@ -59,9 +99,18 @@ let counter = 0;
  * NOTE: ".counter_value" should represent current state of counter
  */
 
+ autoIncrement.addEventListener('click', () => {
+    clearInterval(interval);
+   interval = setInterval(() => {
+        action('+');
+    }, 1000);
+});
+
 /**
  * Exercise 7
  *
  * when the user clicks on "#stop_auto",
  * the auto counter should stop
  */
+
+ stopAuto.addEventListener('click', () => clearInterval(interval));
