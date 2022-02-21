@@ -13,10 +13,10 @@
   "devDependencies": {
     "@testing-library/dom": "^7.2.0",
     "concat": "^1.0.3",
-    "jest": "^25.1.0"
+    "jest": "^27.5.1"
   },
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "serve": "^11.3.0"
+    "serve": "^13.0.2"
   }
 }
